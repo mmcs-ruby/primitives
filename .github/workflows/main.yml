@@ -20,12 +20,12 @@ jobs:
         chmod +x ./cc-test-reporter
     - name: Before-build Codeclimate
       run: ./cc-test-reporter before-build
-        - uses: actions/cache@v2
-        with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-gems-
+    - uses: actions/cache@v2
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-gems-
     - name: Run the default task
       run: bundle exec rake
     - name: After-build Codeclimate
