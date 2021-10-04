@@ -1,3 +1,7 @@
+[![Build](https://github.com/mmcs-ruby/primitives/actions/workflows/main.yml/badge.svg)](https://github.com/mmcs-ruby/primitives/actions/workflows/main.yml)
+<a href="https://codeclimate.com/github/mmcs-ruby/primitives/maintainability"><img src="https://api.codeclimate.com/v1/badges/d424b22ca6482d937001/maintainability" /></a>
+<a href="https://codeclimate.com/github/mmcs-ruby/primitives/test_coverage"><img src="https://api.codeclimate.com/v1/badges/d424b22ca6482d937001/test_coverage" /></a>
+
 # Primitives
 
 Primitives is a gem for performing Boolean operations with
