@@ -26,6 +26,8 @@ class Point
 
   #Reflects a point by the line
   # line is an instance of class Line
+  # http://www.mathhelpplanet.com/viewtopic.php?f=33&t=2303
+  # TODO:
   def mirror(line)
     fail "Not implemented"
   end
