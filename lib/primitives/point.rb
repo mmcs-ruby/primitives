@@ -31,5 +31,9 @@ class Point
   def mirror(line)
     fail "Not implemented"
   end
+  #@return distance between two points
+  def distance(point)
+    fail "Not implemented"
+  end
 
 end
