@@ -19,6 +19,6 @@ class BooleanTests < Minitest::Test
 
   def test_intersection_of_shapes_which_have_not_shared_sectors_returned_an_empty_polygon_set
     polygon_set = intersect_triangles(@triangle1, @triangle2)
-    assert_equal polygon_set.size, 0
+    assert_equal 0, polygon_set.size
   end
 end
