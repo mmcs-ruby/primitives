@@ -28,14 +28,14 @@ Or install it yourself as:
 You can perform a boolean operation only for pair of shapes of the same type:
 
 ```ruby
-p1t1 = Point.new(1, 1)
-p2t1 = Point.new(4, 1)
-p3t1 = Point.new(3, 3)
+p1t1 = Point.new(1.0, 1.0)
+p2t1 = Point.new(4.0, 1.0)
+p3t1 = Point.new(3.0, 3.0)
 t1 = Triangle.new(p1t1, p2t1, p3t1)
 
-p1t2 = Point.new(3, 2)
-p2t2 = Point.new(7, 2)
-p3t2 = Point.new(5, 4)
+p1t2 = Point.new(3.0, 2.0)
+p2t2 = Point.new(7.0, 2.0)
+p3t2 = Point.new(5.0, 4.0)
 t2 = Triangle.new(p1t2, p2t2, p3t2)
 
 triangles = PolygonSet.new([t1, t2])
