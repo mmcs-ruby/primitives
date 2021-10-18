@@ -7,4 +7,3 @@ module Primitives
     end
   end
 end
-
