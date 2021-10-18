@@ -14,7 +14,7 @@ module Primitives
   require_relative 'primitives/shape/circle'
   require_relative 'primitives/shape/polygon'
   require_relative 'primitives/shape/rectangle'
-  require_relative 'primitives/shape/trianlge'
+  require_relative 'primitives/shape/triangle'
 
   require_relative 'primitives/boolean'
   require_relative 'primitives/layout'
