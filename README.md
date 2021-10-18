@@ -25,7 +25,29 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+You can perform a boolean operation only for pair of shapes of the same type:
+
+```ruby
+p1t1 = Point.new(1.0, 1.0)
+p2t1 = Point.new(4.0, 1.0)
+p3t1 = Point.new(3.0, 3.0)
+t1 = Triangle.new(p1t1, p2t1, p3t1)
+
+p1t2 = Point.new(3.0, 2.0)
+p2t2 = Point.new(7.0, 2.0)
+p3t2 = Point.new(5.0, 4.0)
+t2 = Triangle.new(p1t2, p2t2, p3t2)
+
+triangles = PolygonSet.new([t1, t2])
+plot(triangles)
+
+intersection_result = intersect_triangles(t1, t2)
+plot(intersection_result)
+```
+
+![triangles_example](docs/images/triangles_example.png)
+
+![intersect_triangles_example](docs/images/intersect_triangles_example.png)
 
 ## Development
 
@@ -35,7 +57,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/mmcs-ruby/primitives. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/primitives/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/mmcs-ruby/primitives. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/mmcs-ruby/primitives/blob/master/CODE_OF_CONDUCT.md).
 
 ## License
 
