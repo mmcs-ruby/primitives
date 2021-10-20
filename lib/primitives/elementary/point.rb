@@ -3,7 +3,7 @@ module Primitives
     class Point
 
       def check_argument(arg)
-        unless arg.is_a?(Integer)
+        unless arg.is_a?(Numeric)
           raise TypeError.new "Invalid type of argument (Must be Int)"
         end
       end
