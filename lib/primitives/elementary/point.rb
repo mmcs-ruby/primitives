@@ -46,7 +46,7 @@ module Primitives
         unless point.is_a? Point
           fail TypeError.new "Invalid type of argument"
         end
-        return Math.sqrt( (@x - point.x) ** 2 + (@y - point.y) ** 2)
+        return Math.sqrt((@x - point.x)**2 + (@y - point.y)**2)
       end
     end
   end
