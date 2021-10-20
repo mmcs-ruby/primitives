@@ -22,9 +22,7 @@ module Primitives
 
       # Changes point's position
       def move(offset_x, offset_y)
-        check_argument(offset_x)
-        check_argument(offset_y)
-        return Point.new(@x + offset_x, @y + offset_y)
+        Point.new(@x + offset_x, @y + offset_y)
       end
 
       #Reflects a point by the line
