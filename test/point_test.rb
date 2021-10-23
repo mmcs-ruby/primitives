@@ -14,7 +14,6 @@ class ElementaryTests < Minitest::Unit::TestCase
     assert_raises Point.new(1.2, "3")
   end
 
-
   def test_move
     point = Point.new(1,2)
     point2 = point.move(1, 3)
@@ -30,5 +29,4 @@ class ElementaryTests < Minitest::Unit::TestCase
     assert_equal 2, point.x
     assert_equal 5, point.y
   end
-
 end
