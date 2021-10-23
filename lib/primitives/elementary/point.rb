@@ -1,6 +1,8 @@
 module Primitives
   module Elementary
     class Point
+      attr_reader :x
+      attr_reader :y
 
       def check_argument(arg)
         unless arg.is_a?(Numeric)
