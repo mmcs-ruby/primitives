@@ -30,7 +30,7 @@ module Primitives
 
       #Reflects a point by the line
       # line is an instance of class Line
-      def mirror!(line)
+      def mirror!(straight_line)
         fail "Not implemented"
       end
 
@@ -38,7 +38,7 @@ module Primitives
       # line is an instance of class Line
       # http://www.mathhelpplanet.com/viewtopic.php?f=33&t=2303
       # TODO:
-      def mirror(line)
+      def mirror(straight_line)
         fail "Not implemented"
       end
 
