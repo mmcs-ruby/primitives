@@ -4,12 +4,6 @@ module Primitives
       attr_reader :x
       attr_reader :y
 
-      def check_argument(arg)
-        unless arg.is_a?(Numeric)
-          raise TypeError.new "Invalid type of argument (Must be Numeric)"
-        end
-      end
-
       def initialize(x, y)
         check_argument(x)
         check_argument(y)
@@ -48,6 +42,14 @@ module Primitives
           fail TypeError.new "Invalid type of argument"
         end
         Math.sqrt((@x - point.x)**2 + (@y - point.y)**2)
+      end
+
+      private
+
+      def check_argument(arg)
+        unless arg.is_a?(Numeric)
+          raise TypeError.new "Invalid type of argument (Must be Numeric)"
+        end
       end
     end
   end
