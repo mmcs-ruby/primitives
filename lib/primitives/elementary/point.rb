@@ -6,7 +6,7 @@ module Primitives
 
       def check_argument(arg)
         unless arg.is_a?(Numeric)
-          raise TypeError.new "Invalid type of argument (Must be Int)"
+          raise TypeError.new "Invalid type of argument (Must be Numeric)"
         end
       end
 
