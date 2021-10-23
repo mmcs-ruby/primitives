@@ -21,7 +21,7 @@ class ElementaryTests < Minitest::Unit::TestCase
     assert_equal 2, point2.x
     assert_equal 5, point2.y
     assert_equal 1, point.x
-    assert_equal  1, 2
+    assert_equal  2, point.y
   end
 
   def test_move!
