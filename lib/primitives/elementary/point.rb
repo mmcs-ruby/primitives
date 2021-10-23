@@ -17,7 +17,8 @@ module Primitives
 
       # Changes point's position
       def move!(offset_x, offset_y)
-        self = self.move(offset_x, offset_y)
+        p = move offset_x, offset_y
+        @x, @y = p.x, p.y
       end
 
       # Changes point's position
