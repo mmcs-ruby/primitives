@@ -45,6 +45,18 @@ intersection_result = intersect_triangles(t1, t2)
 plot(intersection_result)
 ```
 
+```ruby
+p1 = Point.new(2.2, 3.3)
+p2 = Point.new(5.5, 6.6)
+ls = LineSegment.new(p1,p2)
+# find a length of a line segment based on two points
+lenght = ls.length
+# return straight line object
+StraightLine sl = ls.to_straight_line
+
+
+```
+
 ![triangles_example](docs/images/triangles_example.png)
 
 ![intersect_triangles_example](docs/images/intersect_triangles_example.png)
