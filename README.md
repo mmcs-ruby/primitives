@@ -56,7 +56,7 @@ point = Point.new(1, 1)
 len = line1.shortest_distance_point point
 #check if lines intersect return Point if true, otherwise return nil
 line2 = StraightLine.new(5, 6, -1)
-intersect_point = line1.intersect_check line2
+intersect_point = line1.line_inersection line2
 ```
 ## Development
 

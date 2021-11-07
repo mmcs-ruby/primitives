@@ -53,13 +53,24 @@ class ElementaryTest < Minitest::Test
     assert_in_delta 4.437601, distance2, @@delta
   end
 
-  def test_line_intersect_check
-    point = @s_line1.intersect_check @s_line2
+  def test_check_line_intersection
+    assert @s_line1.check_line_intersection @s_line2
+
+    @s_line_float1 = Elementary::StraightLine.new(1.1, 2.2, 3.3)
+    @s_line_float2 = Elementary::StraightLine.new(1.1, 2.2, 3.4)
+    assert @s_line_float1.check_line_intersection @s_line_float2
+
+    parallel_to_s_line1 = Elementary::StraightLine.new(3, 2, -5)
+    assert @s_line1.check_line_intersection parallel_to_s_line1
+  end
+
+  def test_line_intersect
+    point = @s_line1.line_intersection @s_line2
     assert_in_delta point.x, -0.14285, @@delta
     assert_in_delta point.y, -0.28571, @@delta
 
     parallel_to_s_line1 = Elementary::StraightLine.new(3, 2, -5)
-    point1 = @s_line1.intersect_check parallel_to_s_line1
+    point1 = @s_line1.line_intersection parallel_to_s_line1
     assert_nil nil, point1
   end
 

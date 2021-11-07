@@ -22,16 +22,27 @@ module Primitives
         ((a * point.x + b * point.y + c).abs / Math.sqrt((a**2) + (b**2)))
       end
 
-      # @return point if straight_lines intersect, otherwise nil
-      def intersect_check(straigt_line)
-        raise TypeError, "Invalid type of argument (Must be Point)" unless straigt_line.is_a? StraightLine
+      # @return true if straight_lines intersect, otherwise false
+      def check_line_intersection(straight_line)
+        raise TypeError, "Invalid type of argument (Must be Point)" unless straight_line.is_a? StraightLine
 
-        if (@a * straigt_line.b - straigt_line.a * @b) != 0
-          x = (@b * straigt_line.c - straigt_line.b * @c).to_f / (@a * straigt_line.b - straigt_line.a * @b)
-          y = (straigt_line.a * @c - @a * straigt_line.c).to_f / (@a * straigt_line.b - straigt_line.a * @b)
+        delta = 1e-6
+        (@a * straight_line.b - straight_line.a * @b) < delta
+      end
+
+      # @return point if straight_lines intersect, otherwise nil
+      def line_intersection(straight_line)
+        raise TypeError, "Invalid type of argument (Must be Point)" unless straight_line.is_a? StraightLine
+
+        delta = 1e-6
+        if (@a * straight_line.b - straight_line.a * @b) < delta
+          x = (@b * straight_line.c - straight_line.b * @c).to_f / (@a * straight_line.b - straight_line.a * @b)
+          y = (straight_line.a * @c - @a * straight_line.c).to_f / (@a * straight_line.b - straight_line.a * @b)
           Point.new(x, y)
         end
       end
+
+      private
 
       def check_argument(arg)
         raise TypeError, "Invalid type of argument (Must be Numeric)" unless arg.is_a?(Numeric)
