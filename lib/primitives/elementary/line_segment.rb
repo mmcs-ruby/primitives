@@ -13,7 +13,7 @@ module Primitives
 
       # Count a length of a line segment based on two points
       def length
-        begins_at.distance ends_at
+        @length ||= begins_at.distance ends_at
       end
 
       # Return straight line object based points coordinates
@@ -24,7 +24,7 @@ module Primitives
         StraightLine.new(a, b, c)
       end
 
-      def check_is_a_point(x)
+      private def check_is_a_point(x)
         unless x.is_a? Point
           fail TypeError.new "Invalid type of argument"
         end

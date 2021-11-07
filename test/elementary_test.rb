@@ -49,5 +49,8 @@ class ElementaryTest < Minitest::Test
     assert_in_delta 4.66690, length, @@delta
   end
 
+  def test_to_straight_line
+    # test will be added when straight line class is approved
+  end
 
 end
