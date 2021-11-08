@@ -49,6 +49,15 @@ plot(intersection_result)
 
 ![intersect_triangles_example](docs/images/intersect_triangles_example.png)
 
+ ```ruby
+line1 = StraightLine.new(3, 2, 1) #the line is given by the equation Ax + By + C = 0
+point = Point.new(1, 1)
+#find shortest distance from point to line
+len = line1.shortest_distance_point point
+#check if lines intersect return Point if true, otherwise return nil
+line2 = StraightLine.new(5, 6, -1)
+intersect_point = line1.line_inersection line2
+```
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
