@@ -1,4 +1,4 @@
-require "test_helper"
+require "./test/test_helper"
 
 class ElementaryTest < Minitest::Test
   include Primitives
@@ -7,6 +7,7 @@ class ElementaryTest < Minitest::Test
 
   def setup
     @point = Elementary::Point.new(2.3, 5.1)
+    @line_segment = Elementary::LineSegment.new(Elementary::Point.new(2.2, 3.3),Elementary::Point.new(5.5, 6.6))
   end
 
   def test_point_attributes_set_correctly_on_instance_create
@@ -42,4 +43,14 @@ class ElementaryTest < Minitest::Test
     assert_in_delta 2.3, original.x, @@delta
     assert_in_delta 5.1, original.y, @@delta
   end
+
+  def test_line_length
+    length = @line_segment.length
+    assert_in_delta 4.66690, length, @@delta
+  end
+
+  def test_to_straight_line
+    # test will be added when straight line class is approved
+  end
+
 end
