@@ -1,6 +1,6 @@
 module Primitives
   module Elementary
-     def distance_points(p1, p2)
+    def distance_points(p1, p2)
 		Math.sqrt((p2.x - p1.x)*(p2.x - p1.x) + (p2.y - p1.y)*(p2.y - p1.y))
     end
 	def rectangle_area(p1, p2)
@@ -23,8 +23,7 @@ module Primitives
 	def intersect_straight_lines_by_points(p1, p2,p3,p4)
 		x = ((p1.x*p2.y - p1.y*p2.x)*(p3.x-p4.x)-(p1.x-p2.x)*(p3.x*p4.y-p3.y*p4.x))/((p1.x-p2.x)*(p3.y-p4.y)-(p1.y-p2.y)*(p3.x-p4.x))
 		y = ((p1.x*p2.y - p1.y*p2.x)*(p3.y-p4.y)-(p1.y-p2.y)*(p3.x*p4.y-p3.y*p4.x))/((p1.x-p2.x)*(p3.y-p4.y)-(p1.y-p2.y)*(p3.x-p4.x))
-		p=Point.new(x, y)
-		p
+		Point.new(x, y)
     end
 	def lines_are_parallel_by_points?(p1, p2,p3,p4)
 		(p1.x-p2.x)*(p3.y-p4.y)==(p1.y-p2.y)*(p3.x-p4.x)
@@ -51,8 +50,7 @@ module Primitives
 		c2 = straight_line2.c
 		y = (a1*c2-a2*c1)/(a2*b1-a1*b2)
 		x = -(c1+b1*y)/a1
-		point = Point.new(x, y)
-		point
+		Point.new(x, y)
     end
 	def angle_straight_lines(straight_line1, straight_line2)
 		a1 = straight_line1.a
@@ -96,20 +94,3 @@ module Primitives
 	end
   end
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
