@@ -58,6 +58,24 @@ len = line1.shortest_distance_point point
 line2 = StraightLine.new(5, 6, -1)
 intersect_point = line1.line_inersection line2
 ```
+
+You can use primitives function:
+
+```ruby
+p1 = Point.new(1.0, 7.0)
+p2 = Point.new(9.0, 7.0)
+distance = distance_points(p1, p2)
+
+p11 = Point.new(1.0, 7.0)
+p22 = Point.new(9.0, 7.0)
+p33 = Point.new(29.0, 17.0)
+bool = one_line?(p11, p22,p33)
+
+str1 = new.StraightLine(2,5,7)
+str2 = new.StraightLine(12,15,75)
+angle = angle_straight_lines(str1,str2)
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
