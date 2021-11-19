@@ -68,11 +68,11 @@ distance = distance_points(p1, p2)
 
 p11 = Point.new(1.0, 7.0)
 p22 = Point.new(9.0, 7.0)
-p23 = Point.new(29.0, 17.0)
-one_line?(p11, p22,p33)
+p33 = Point.new(29.0, 17.0)
+bool = one_line?(p11, p22,p33)
 
 str1 = new.StraightLine(2,5,7)
-str2 = new.StraightLine(2,5,7)
+str2 = new.StraightLine(12,15,75)
 angle = angle_straight_lines(str1,str2)
 ```
 
